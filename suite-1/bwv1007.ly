@@ -1,7 +1,9 @@
-\version "2.18.2"
+\version "2.24.3"
+\language "english"
+
+\pointAndClickOff
 
 \include "header.ily"
-
 \include "bwv1007_prelude.ly"
 \include "bwv1007_allemande.ly"
 \include "bwv1007_courante.ly"
@@ -12,7 +14,7 @@
 
 \book {
 
-\score { { \clef "bass" \transpose c c, { \prelude } }
+\score { { \transpose c c, { \prelude } }
 	\layout {  }
 	\header { piece = "Prélude" }
 	\midi {\tempo 4 = 80}

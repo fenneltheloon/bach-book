@@ -1,4 +1,5 @@
-\version "2.18.2"
+\version "2.24.3"
+\language "englsh"
 
 menuetII = \context Staff \relative c'' {
 
@@ -6,15 +7,15 @@ menuetII = \context Staff \relative c'' {
 	\key d \minor
 	\set Staff.midiInstrument = "cello"
 
-	bes8( a bes) d, ees g, | f4 a' d, | g8( fis g) bes, c ees, |
-	d( a' d) g fis a | bes( a bes) d, ees g, | f4 a' d, |
-	g8( fis g) bes, c ees,! | d( g') fis2 | \bar ":|.|:"
-	d8( fis a) c ees d | c( bes a bes) g4 | c,8( e! g) bes d c |
-	bes( a g a) f ees | d f bes( a bes) d, | ees g bes( a bes) d |
-	c ees d bes f a | bes f d f bes,4 | b8( d f) aes g f |
-	ees( g c d) ees4 | a,,8( c ees) g f ees |
-        d( f bes c) d4 |
-	fis,,8( a c) ees d c | bes d g( a bes) g |
-	c, bes'( a g) d fis |
+	bf8( a bf) d, ef g, | f4 a' d, | g8( fs g) bf, c ef, |
+	d( a' d) g fs a | bf( a bf) d, ef g, | f4 a' d, |
+	g8( fs g) bf, c ef,! | d( g') fs2 | \bar ":|.|:"
+	d8( fs a) c ef d | c( bf a bf) g4 | c,8( e! g) bf d c |
+	bf( a g a) f ef | d f bf( a bf) d, | ef g bf( a bf) d |
+	c ef d bf f a | bf f d f bf,4 | b8( d f) af g f |
+	ef( g c d) ef4 | a,,8( c ef) g f ef |
+        d( f bf c) d4 |
+	fs,,8( a c) ef d c | bf d g( a bf) g |
+	c, bf'( a g) d fs |
 	g,2.\fermata | \bar ":|."
 }
