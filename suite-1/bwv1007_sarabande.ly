@@ -1,5 +1,5 @@
 \version "2.24.3"
-\language "englsh"
+\language "english"
 
 sarabande = \context Staff \relative c'' {
   \clef bass

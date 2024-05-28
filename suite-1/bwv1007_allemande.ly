@@ -1,5 +1,5 @@
 \version "2.24.3"
-\language "englsh"
+\language "english"
 
 allemande = \context Staff \relative c'' {
 
