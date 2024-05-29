@@ -78,7 +78,7 @@ prelude = \context Staff \relative c {
 	%15
 	fs(_1 c'_2 d)_\thumb c_2 d c d c fs,( c' d) c d c d c |
 
-	% 16
+	%16
 	g(_0 b_1 f')_2 e_1 f b, f' b, g( b f') e f b, f' b, |
 
 	%17
@@ -99,14 +99,34 @@ prelude = \context Staff \relative c {
 	cs,,\downbow\startGroup a'\upbow\stopGroup e'(\downbow\startGroup fs g) 
 	e\upbow fs\downbow g\upbow\stopGroup |
 
-	% 21
-	c,,!( a' d) e fs d e fs c,( a' d) e fs d e fs |
-	c,( a' d) fs a cs d8\fermata~ d16 a, b c! d e fs g |
-	a fs d e fs g a b c a fs g a b c d |
-	ef( d cs) d d( c b) c c a fs e! d a b c |
-	d,( a' d) fs a b c a b g d c b g a b |
+	%21
+	c,,!_\thumb\downbow\startGroup a'_3\upbow\stopGroup d(_2 e_\thumb\startGroup 
+	fs)_1 d_2\upbow e_\thumb\downbow fs_1\upbow\stopGroup c,\startGroup 
+	a'\stopGroup d(\startGroup e fs) d e fs\stopGroup |
+
+	%22
+	c,_\thumb\startGroup a'(_3_\flageolet\stopGroup d_\thumb_\flageolet\startGroup
+	fs)_3\stopGroup a_\thumb\startGroup cs_2 d8_3\fermata~ 16\stopGroup a,_\thumb
+	b_1 c!_2 d_\thumb e_1 fs_3 g_\thumb |
+
+	%23
+	a_1 fs_3 d_\thumb e_1 fs_3\stopGroup g_\thumb a_1_\startGroup b_2 c_3 a_1 fs_2
+	g_\thumb a_1 b_2 c_3\stopGroup d_2\startGroup |
+
+	%24
+	\slurDashed
+	ef(_3 d_2 cs)_\1\stopGroup d_3\startGroup d( c_2 b)_1\stopGroup
+	c_\3\startGroup c a_1 fs_2 e!_1 d_\thumb a_\thumb_\flageolet b_1 c_2 |
+
+	%25
+	d,_0 a'(_\thumb_\flageolet d_\thumb_\flageolet fs)_2 a_1 b_2 c_3 a_1 b_2 
+	g_\thumb d_\thumb\stopGroup c_2\startGroup b_1 g_2 a_\thumb b_1 |
+
 	% 26
-	d,( g b) d g a b g cs( bf a) bf bf( a gs) a |
+	d,_0 g(_2 b_1 d)_\thumb_\flageolet\stopGroup g_\thumb_\flageolet\startGroup
+	a_1 b_2 g_\thumbcirc\stopGroup cs(_3\startGroup bf_1 a)_\thumbcirc\stopGroup
+	bf_2\startGroup bf( a_1 gs)_\thumb\stopGroup a_1\startGroup |
+
 	a( g! fs) g g e cs b a( cs e) g a cs d cs |
 	d a fs( e fs) a d, fs a, d cs b a g fs e |
 	d8\noBeam c''!16( b a g fs e d) c'( b a g fs e d |
