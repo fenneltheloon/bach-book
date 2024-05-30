@@ -2,6 +2,13 @@
 \language "english"
 
 prelude = \context Staff \relative c {
+
+	\override TextSpanner.bound-details.left.text = \markup \upright "III"
+	\override TextSpanner.bound-details.right.text = 
+	\markup \draw-line #'(0 . 1)
+	\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER 
+	\override TextSpanner.direction = #DOWN
+
 	\clef bass
 	\key g \major
 
@@ -127,8 +134,15 @@ prelude = \context Staff \relative c {
 	a_1 b_2 g_\thumbcirc\stopGroup cs(_3\startGroup bf_1 a)_\thumbcirc\stopGroup
 	bf_2\startGroup bf( a_1 gs)_\thumb\stopGroup a_1\startGroup |
 
-	a( g! fs) g g e cs b a( cs e) g a cs d cs |
-	d a fs( e fs) a d, fs a, d cs b a g fs e |
+	%27
+	a( g! fs)_2 g_3 g e_1 cs_2 b_1 a_\thumb_\flageolet cs(_2 e_1 
+	g)_\thumb_\flageolet\stopGroup a_\thumb cs_2\startGroup d_3 cs_2 |
+
+	%28
+	d_3 a_3\stopGroup fs_3\startGroup e_1 fs_3 a_3_\flageolet_1 d,_\thumb fs_3 
+	a,_\thumb_\flageolet d_\thumb_\flageolet cs_3 b_1\startTextSpanner\stopGroup
+	a_\thumb_\flageolet g_2\startGroup fs_1 e_\thumb\stopTextSpanner\stopGroup |
+
 	d8\noBeam c''!16( b a g fs e d) c'( b a g fs e d |
 	c) b'( a g fs e d c b) a'( g fs e d c b |
 	% 31
