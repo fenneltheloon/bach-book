@@ -143,8 +143,15 @@ prelude = \context Staff \relative c {
 	a,_\thumb_\flageolet d_\thumb_\flageolet cs_3 b_1\startTextSpanner\stopGroup
 	a_\thumb_\flageolet g_2\startGroup fs_1 e_\thumb\stopTextSpanner\stopGroup |
 
-	d8\noBeam c''!16( b a g fs e d) c'( b a g fs e d |
-	c) b'( a g fs e d c b) a'( g fs e d c b |
+	%29
+	d8_0\breathe c''!16(_3\startGroup\upbow b_2 a_1 g_\thumb fs_2 e)_1 
+	d_\thumb\downbow c'(_\upbow b a g fs e d) |
+
+	%30
+	c_\2\downbow\stopGroup b'(_3\upbow\startGroup a_1 g_\thumb fs_3 e_1 d_\thumb 
+	c)_2 b_1\stopGroup a'(_3_\flageolet\startGroup g_\thumb_\flageolet\stopGroup 
+	fs_3\startGroup e_1 d_\thumb c_2 b)_1 |
+
 	% 31
 	a) g'( fs e) fs a d, a' e a fs a g a e a |  \break
 	fs a d, a' g a e a fs a d, a' g a e a |
