@@ -126,6 +126,7 @@ prelude = \context Staff \relative c {
 	c_\3\startGroup c a_1 fs_2 e!_1 d_\thumb a_\thumb_\flageolet b_1 c_2 |
 
 	%25
+	\slurSolid
 	d,_0 a'(_\thumb_\flageolet d_\thumb_\flageolet fs)_2 a_1 b_2 c_3 a_1 b_2 
 	g_\thumb d_\thumb\stopGroup c_2\startGroup b_1 g_2 a_\thumb b_1 |
 
@@ -140,22 +141,38 @@ prelude = \context Staff \relative c {
 
 	%28
 	d_3 a_3\stopGroup fs_3\startGroup e_1 fs_3 a_3_\flageolet_1 d,_\thumb fs_3 
-	a,_\thumb_\flageolet d_\thumb_\flageolet cs_3 b_1\startTextSpanner\stopGroup
-	a_\thumb_\flageolet g_2\startGroup fs_1 e_\thumb\stopTextSpanner\stopGroup |
+	a,_\thumb_\flageolet d_\thumb_\flageolet cs_3 b_1\startTextSpan\stopGroup
+	a_\thumb_\flageolet g_2\startGroup fs_1 e_\thumb\stopTextSpan\stopGroup |
 
 	%29
 	d8_0\breathe c''!16(_3\startGroup\upbow b_2 a_1 g_\thumb fs_2 e)_1 
-	d_\thumb\downbow c'(_\upbow b a g fs e d) |
+	d_\thumb\downbow c'(\upbow b a g fs e d) |
 
 	%30
 	c_\2\downbow\stopGroup b'(_3\upbow\startGroup a_1 g_\thumb fs_3 e_1 d_\thumb 
 	c)_2 b_1\stopGroup a'(_3_\flageolet\startGroup g_\thumb_\flageolet\stopGroup 
-	fs_3\startGroup e_1 d_\thumb c_2 b)_1 |
+	fs_3\startGroup e_1 d_\thumb c_2 b)_1\stopGroup |
 
-	% 31
-	a) g'( fs e) fs a d, a' e a fs a g a e a |  \break
-	fs a d, a' g a e a fs a d, a' g a e a |
-	fs a d, a' e a fs a <<{s a[ s a] s a[ s a]} \\ {g[ s a] s b[ s d,] s}>> |  \break
+	\override TextSpanner.bound-details.left.text = \markup \upright "I"
+
+	%31
+	a_\thumb_\flageolet g'(_3_\flageolet\startTextSpan\startGroup fs_3 e)_1 
+	<<{s a[^\thumb^\flageolet^"II" s a]^\thumb^\flageolet s a[ s a] s a[ s a]} \\ { 
+		\slurDashed \slurUp
+		fs[(_3_"I"\stopTextSpan \hideNotes a) 
+	\unHideNotes d,](_\thumb \hideNotes a') \unHideNotes e[(_1 \hideNotes a)
+	\unHideNotes fs](_3 \hideNotes a) \unHideNotes g[(_3 \hideNotes a) 
+	\unHideNotes e](_1 \hideNotes a) \unHideNotes}>> |
+
+	%32
+	<< {s a[ s a] s a[ s a] s a[ s a] s a[ s a]} \\ { \slurUp fs([_3 \hideNotes a)
+	\unHideNotes d,(]_\thumb \hideNotes a') \unHideNotes g[_3^\markup {\italic 
+	\tiny "sim."} \hideNotes a \unHideNotes e]_1 \hideNotes a \unHideNotes fs[_3 
+	\hideNotes a \unHideNotes d,]_\thumb \hideNotes a' \unHideNotes g[_3 
+	\hideNotes a \unHideNotes e]_1 \hideNotes a} >> |
+
+	fs a d, a' e a fs a <<{s a[ s a] s a[ s a]} \\ 
+	{g[ s a] s b[ s d,] s}>> |  \break
 	<<{s a'[ s a] s a[ s a] s a[ s a] s a[ s a]} \\ {a[ s b] s c[ s d,] s b'[ s c] s d[ s b] s}>> |
 	<<{s a[ s a] s a[ s a] s a[ s a] s a[ s a]} \\ {c[ s b] s c[ s a] s b[ s a] s b[ s g] s}>> |  \break
 	% 36
