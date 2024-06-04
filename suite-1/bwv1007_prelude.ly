@@ -113,8 +113,8 @@ prelude = \context Staff \relative c {
 
 	%22
 	c,_\thumb\startGroup a'(_3_\flageolet\stopGroup d_\thumb_\flageolet\startGroup
-	fs)_3\stopGroup a_\thumb\startGroup cs_2 d8_3\fermata~ 16\stopGroup a,_\thumb
-	b_1 c!_2 d_\thumb e_1 fs_3 g_\thumb |
+	fs)_3\stopGroup a_\thumb\startGroup cs_2 d8_3\fermata~ 16\stopGroup 
+	a,_\thumb\startGroup b_1 c!_2 d_\thumb e_1 fs_3 g_\thumb |
 
 	%23
 	a_1 fs_3 d_\thumb e_1 fs_3\stopGroup g_\thumb a_1_\startGroup b_2 c_3 a_1 fs_2
@@ -157,26 +157,36 @@ prelude = \context Staff \relative c {
 
 	%31
 	a_\thumb_\flageolet g'(_3_\flageolet\startTextSpan\startGroup fs_3 e)_1 
-	<<{s a[^\thumb^\flageolet^"II" s a]^\thumb^\flageolet s a[ s a] s a[ s a]} \\ { 
-		\slurDashed \slurUp
-		fs[(_3_"I"\stopTextSpan \hideNotes a) 
+	<< {s\stopTextSpan a[^\thumb^\flageolet^"II" s a]^\thumb^\flageolet s a[ s a] s a[ s a]} \\ 
+	{\slurDashed \slurUp fs[(_3_"I" \hideNotes a) 
 	\unHideNotes d,](_\thumb \hideNotes a') \unHideNotes e[(_1 \hideNotes a)
 	\unHideNotes fs](_3 \hideNotes a) \unHideNotes g[(_3 \hideNotes a) 
-	\unHideNotes e](_1 \hideNotes a) \unHideNotes}>> |
+	\unHideNotes e](_1 \hideNotes a) \unHideNotes} >> |
 
 	%32
 	<< {s a[ s a] s a[ s a] s a[ s a] s a[ s a]} \\ { \slurUp fs([_3 \hideNotes a)
 	\unHideNotes d,(]_\thumb \hideNotes a') \unHideNotes g[_3^\markup {\italic 
 	\tiny "sim."} \hideNotes a \unHideNotes e]_1 \hideNotes a \unHideNotes fs[_3 
 	\hideNotes a \unHideNotes d,]_\thumb \hideNotes a' \unHideNotes g[_3 
-	\hideNotes a \unHideNotes e]_1 \hideNotes a} >> |
+	\hideNotes a \unHideNotes e]_1 \hideNotes a \unHideNotes} >> |
 
-	fs a d, a' e a fs a <<{s a[ s a] s a[ s a]} \\ 
-	{g[ s a] s b[ s d,] s}>> |  \break
-	<<{s a'[ s a] s a[ s a] s a[ s a] s a[ s a]} \\ {a[ s b] s c[ s d,] s b'[ s c] s d[ s b] s}>> |
-	<<{s a[ s a] s a[ s a] s a[ s a] s a[ s a]} \\ {c[ s b] s c[ s a] s b[ s a] s b[ s g] s}>> |  \break
-	% 36
-	<<{s a[ s a] s a[ s a]} \\ {a[ s g] s a[ s fs] s}>> g a fs a g a e a |
+	%33
+	<< {s a[ s a] s a[ s a]\stopGroup s a[^3^\flageolet s a]^3^\flageolet s a[ s a]} \\ 
+	{fs[_3 s d]_\thumb s e[_1 s fs]_3 s g[_\thumb s a]_\thumb s b[_\thumb s 
+	d,]_1_"III" s } >> |
+
+	%34
+	<<{s a'[ s a] s a[ s a] s a[ s a] s a[ s a]} \\ 
+	{a[_\thumb s b]_\thumb s c[_1 s d,]_1 s b'[_\thumb s c]_1 s d[_3_\flageolet s 
+	b]_\thumb s}>> |
+
+	%35
+	<<{s a[ s a] s a[ s a] s a[ s a] s a[ s a]} \\
+	{c[_1 s b]_\thumb s c[_1 s a]_\thumb s b[_\thumb s a]_\thumb s b[_1 s g]_\thumb s}>> |
+
+	%36
+	<<{s a[ s a] s a[ s a] s a[ s a]^3^"I" s a[^3 s a]^3} \\ {a[_\thumb s g]_\thumb s a[_\thumb s fs]_\thumb s g[_\thumb_\flageolet s fs]_\thumb s g[_1 s e]_2 s}>> |
+
 	fs a d, e f d fs d g d gs d a' d, bf' d, |
 	b'! d, c' d, cs' d, d' d, ef' d, e' d, f' d, fs' d, |
 	g'( b, d,) b' g' b, g' b, g'( b, d,) b' g' b, g' b, |
