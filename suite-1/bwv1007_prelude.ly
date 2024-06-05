@@ -8,6 +8,7 @@ prelude = \context Staff \relative c {
 	\markup \draw-line #'(0 . 1)
 	\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER 
 	\override TextSpanner.direction = #DOWN
+	\set fingeringOrientations = #'(left)
 
 	\clef bass
 	\key g \major
@@ -153,45 +154,99 @@ prelude = \context Staff \relative c {
 	c)_2 b_1\stopGroup a'(_3_\flageolet\startGroup g_\thumb_\flageolet\stopGroup 
 	fs_3\startGroup e_1 d_\thumb c_2 b)_1\stopGroup |
 
+
+	<< {
+	\override TextSpanner.bound-details.left.text = \markup \upright "II"
+	\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER 
+	\override TextSpanner.direction = #UP
+	%31a
+		s4 s16 a'[^\thumb^\flageolet\startTextSpan s a]^\thumb^\flageolet s a[ s a] s a[\stopTextSpan s a] |
+	%32a
+	  s a[ s a] s a[ s a] s a[ s a] s a[ s a] |
+	%33a
+    s a[ s a] s a[ s a] s a[^3^\flageolet s a]^3^\flageolet s a[ s a] | 
+  %34a
+    s a[ s a] s a[ s a] s a[ s a] s a[ s a]
+  %35a
+    s a[ s a] s a[ s a] s a[ s a] s a[ s a]
+  %36a
+    s a[ s a] s a[ s a] s a[ s a]^3^"I" s a[^3 s a]^3 } \\ 
+	{
+	%31b
 	\override TextSpanner.bound-details.left.text = \markup \upright "I"
+	\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER 
+	\override TextSpanner.direction = #DOWN
 
-	%31
-	a_\thumb_\flageolet g'(_3_\flageolet\startTextSpan\startGroup fs_3 e)_1 
-	<< {s\stopTextSpan a[^\thumb^\flageolet^"II" s a]^\thumb^\flageolet s a[ s a] s a[ s a]} \\ 
-	{\slurDashed \slurUp fs[(_3_"I" \hideNotes a) 
-	\unHideNotes d,](_\thumb \hideNotes a') \unHideNotes e[(_1 \hideNotes a)
-	\unHideNotes fs](_3 \hideNotes a) \unHideNotes g[(_3 \hideNotes a) 
-	\unHideNotes e](_1 \hideNotes a) \unHideNotes} >> |
+	  \slurUp a,_\thumb_\flageolet g'(_3_\flageolet\startTextSpan\startGroup fs_3 
+	  e)_1\slurDashed fs[(_3 \hideNotes a) \unHideNotes 
+	  d,](_\thumb \hideNotes a') \unHideNotes 
+	  e[(_1 \hideNotes a) \unHideNotes 
+	  fs](_3 \hideNotes a) \unHideNotes
+	  g[(_3\stopTextSpan \hideNotes a) \unHideNotes
+	  e](_1 \hideNotes a) \unHideNotes |
+	%32b
+	  \slurUp fs([_3 \hideNotes a) \unHideNotes 
+	  d,(]_\thumb \hideNotes a') \unHideNotes
+	  g[_3^\markup {\italic \tiny "sim."} \hideNotes a \unHideNotes
+	  e]_1 \hideNotes a \unHideNotes 
+	  fs[_3 \hideNotes a \unHideNotes 
+	  d,]_\thumb \hideNotes a' \unHideNotes 
+	  g[_3 \hideNotes a \unHideNotes 
+	  e]_1 \hideNotes a \unHideNotes |
+	%33b
+    fs[_3 s d]_\thumb s e[_1 s fs]_3 s\stopGroup g[_\thumb s a]_\thumb s b[_\thumb s 
+	  d,]_1_"III" s | 
+	%34b
+    a'[_\thumb s b]_\thumb s c[_1 s d,]_1_"III" s b'[_\thumb s c]_1 s d[_3_\flageolet s 
+	  b]_\thumb s |
+	%35b
+    c[_1 s b]_\thumb s c[_1 s a]_\thumb s b[_\thumb s a]_\thumb s b[_1 s g]_\thumb s |
+	%36b
+		a[_\thumb s g]_\thumb s a[_\thumb s fs]_\thumb s g[_\thumb_\flageolet s 
+		fs]_\thumb s g[_1 s e]_2 s |
+	} >>
 
-	%32
-	<< {s a[ s a] s a[ s a] s a[ s a] s a[ s a]} \\ { \slurUp fs([_3 \hideNotes a)
-	\unHideNotes d,(]_\thumb \hideNotes a') \unHideNotes g[_3^\markup {\italic 
-	\tiny "sim."} \hideNotes a \unHideNotes e]_1 \hideNotes a \unHideNotes fs[_3 
-	\hideNotes a \unHideNotes d,]_\thumb \hideNotes a' \unHideNotes g[_3 
-	\hideNotes a \unHideNotes e]_1 \hideNotes a \unHideNotes} >> |
+	%37
+	fs_1 a_3_\flageolet\upbow d,_\thumb\downbow e_1\upbow 
+	<< {\slurDashed \slurDown f[(^2 \hideNotes d) \unHideNotes fs](^3 \hideNotes 
+			d) \unHideNotes g[(^\thumb^\flageolet \hideNotes d) \unHideNotes gs](^1 
+			\hideNotes d) \unHideNotes a'[(^1 \hideNotes 
+			d,) \unHideNotes bf'](^2 \hideNotes d,)\unHideNotes | 
+	%38a
+	  b'![(^3 \hideNotes d,) \unHideNotes 
+	  c'](^3 \hideNotes d,) \unHideNotes 
+	  cs'[(^3 \hideNotes d,) \unHideNotes 
+	  d'](^\thumb^\flageolet \hideNotes d,) \unHideNotes 
+	  ef'[^1\downbow \hideNotes d,\upbow \unHideNotes 
+	  e']^1\downbow \hideNotes d,\upbow \unHideNotes 
+	  f'[^2\downbow \hideNotes d,\upbow \unHideNotes
+	  fs']^3\downbow \hideNotes d,\upbow \unHideNotes } \\
+	  {s d[_\thumb_\flageolet s d]_\thumb_\flageolet s d[ s d] s d[ s d] |
+	%38b
+	 	s d[ s d] s d[ s 
+	 	d]_0_\markup {\bold \italic \small \concat {"(8" \super "vb" ")"}} s 
+	 	d[_0 s d]_0 s d[ s d]
+	 } >> |
 
-	%33
-	<< {s a[ s a] s a[ s a]\stopGroup s a[^3^\flageolet s a]^3^\flageolet s a[ s a]} \\ 
-	{fs[_3 s d]_\thumb s e[_1 s fs]_3 s g[_\thumb s a]_\thumb s b[_\thumb s 
-	d,]_1_"III" s } >> |
+	%39
+	g'_3_\flageolet b,(_1 d,_\thumb b')_1 g'_3_\flageolet b,_1 g' b, g' 
+	\slurDashed
+	b,( d, b') g' b, g' b, |
 
-	%34
-	<<{s a'[ s a] s a[ s a] s a[ s a] s a[ s a]} \\ 
-	{a[_\thumb s b]_\thumb s c[_1 s d,]_1 s b'[_\thumb s c]_1 s d[_3_\flageolet s 
-	b]_\thumb s}>> |
+	%40
+	\slurSolid
+	g'_3_\flageolet a,(_1 d,_\thumb a') g'_3_\flageolet a,_1_\flageolet g' a, 
+	\slurDashed
+	g' a,( d, a') g'_3_\flageolet a,_1_\flageolet g' a, |
 
-	%35
-	<<{s a[ s a] s a[ s a] s a[ s a] s a[ s a]} \\
-	{c[_1 s b]_\thumb s c[_1 s a]_\thumb s b[_\thumb s a]_\thumb s b[_1 s g]_\thumb s}>> |
+	%41
+	\slurSolid
+	fs'_3 c(_2 d,_\thumb c')_2 
+	\slurDashed
+	fs( c) fs( c) fs c( d, c') fs( c) fs\upbow c\downbow |
 
-	%36
-	<<{s a[ s a] s a[ s a] s a[ s a]^3^"I" s a[^3 s a]^3} \\ {a[_\thumb s g]_\thumb s a[_\thumb s fs]_\thumb s g[_\thumb_\flageolet s fs]_\thumb s g[_1 s e]_2 s}>> |
-
-	fs a d, e f d fs d g d gs d a' d, bf' d, |
-	b'! d, c' d, cs' d, d' d, ef' d, e' d, f' d, fs' d, |
-	g'( b, d,) b' g' b, g' b, g'( b, d,) b' g' b, g' b, |
-	g'( a, d,) a' g' a, g' a, g'( a, d,) a' g' a, g' a, |
-	% 41
-	fs'( c d,) c' fs c fs c fs( c d,) c' fs c fs c |
-	<g, b' g'>1\fermata | \bar "|."
+	%42
+	<g,-0 b'-1 g'-3>1^\markup{ 
+		\musicglyph "scripts.upbow" \musicglyph "scripts.downbow" } | \fine
+		\mark \markup { \smaller \musicglyph "scripts.ufermata" }
 }

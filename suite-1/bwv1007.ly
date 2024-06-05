@@ -16,29 +16,48 @@
 \book {
 
 \score { { \prelude }
-\header { piece = "Prelude" }
+\header {
+	piece = "Prelude" 
+}
 }
 
 \score { { \allemande } 
-\header { piece = "Allemande" }
+\header {
+	piece = "Allemande" 
+  opus = ##f 
+}
 }
 
 \score { { \courante }
-\header { piece = "Courante" }
+\header {
+	piece = "Courante" 
+  opus = ##f 
+}
 }
 
 \score { { \sarabande }
-\header { piece = "Sarabande" }
+\header {
+	piece = "Sarabande" 
+  opus = ##f 
+}
 }
 
 \score { { \menuetI }
-\header { piece = "Minuet I" }
+\header {
+	piece = "Minuet I" 
+  opus = ##f 
+}
 }
 
 \score { { \menuetII }
-\header { piece = "Minuet II" }
+\header {
+	piece = "Minuet II" 
+  opus = ##f 
+}
 }
 
 \score { { \gigue }
-\header { piece = "Gigue" }
-}}
+\header {
+	piece = "Gigue" 
+  opus = ##f 
+}}}
