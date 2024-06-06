@@ -23,7 +23,7 @@ slurDashed = \slurDashPattern 0.6 0.85
       (make-pango-font-tree "Noto Serif"
                             "Noto Sans"
                             "Noto Sans Mono"
-                            (/ staff-height pt 20)))
+                            (/ staff-height pt 18)))
 }
 
 \layout {
@@ -32,6 +32,8 @@ slurDashed = \slurDashPattern 0.6 0.85
     \consists Horizontal_bracket_engraver
     \override HorizontalBracket.direction = #UP
     \override HorizontalBracket.bracket-flare = #'(0 . 0)
-    \override HorizontalBracket.staff-padding = 4.5
+    \override HorizontalBracket.staff-padding = 5
+    \override HorizontalBracket.outside-staff-priority = 2000
+    \override HorizontalBracket.break-overshoot = #'(-5 . -5)
   }
 }
