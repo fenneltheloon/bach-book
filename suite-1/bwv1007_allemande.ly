@@ -87,7 +87,10 @@ allemande = \context Staff \relative c' {
 		g'8_3_\flageolet\upbow |
 
 		%14
-		d,16_\thumb_\flageolet_\markup {\bold \italic \tiny \concat {"(8" \super "vb" ")"}} g'_3 fs_2 e_1 fs_2 d_\thumb_\flageolet a_2_\flageolet d_3_\flageolet d,(_\thumb fs_\3 a)_\thumb c!_2 b8._\finger "2-1"\trill a16_\thumb |
+		d,16_\thumb_\flageolet_\markup {\bold \italic \tiny \concat {
+			"(8" \super "va" ")"}} g'_3 fs_2 e_1 fs_2 d_\thumb_\flageolet 
+		a_2_\flageolet d_3_\flageolet d,(_\thumb fs_\3 a)_\thumb c!_2 
+		b8._\finger "2-1"\trill a16_\thumb |
 
 		%15
 		<g,-0 d'-\thumb b'-3>8. a'16_1 g16(_\thumb fs_1 e)_\thumb d'_2 cs_1 e_3 a,_1
@@ -137,11 +140,11 @@ allemande = \context Staff \relative c' {
 		e_\1 a_\thumb\startGroup b_1 
 		<< {
       \once \override Parentheses.font-size = #0
-      \once \override Fingering.direction = #CENTER
+	    \set fingeringOrientations = #'(left)
       %TODO: get these fingerings to show up on side of note not on bottom
 			b8.-\finger "2-1"\parenthesize\trill
 			a16_3_\flageolet_"II"} \\ {
-      \once \override Fingering.direction = #CENTER
+	    \set fingeringOrientations = #'(left)
 			e4_\thumb} >> |
 
 		%24
