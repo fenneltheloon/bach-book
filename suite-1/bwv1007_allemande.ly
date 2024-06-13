@@ -140,12 +140,8 @@ allemande = \context Staff \relative c' {
 		e_\1 a_\thumb\startGroup b_1 
 		<< {
       \once \override Parentheses.font-size = #0
-	    \set fingeringOrientations = #'(left)
-      %TODO: get these fingerings to show up on side of note not on bottom
-			b8.-\finger "2-1"\parenthesize\trill
-			a16_3_\flageolet_"II"} \\ {
-	    \set fingeringOrientations = #'(left)
-			e4_\thumb} >> |
+			b'8.\parenthesize\trill
+			a16_3_\flageolet-"II"} \\ {e4-\thumb} >> |
 
 		%24
 		<<{a8. b16}\\{a,8. s16}\\{e'8. s16}>> c'16 b c g! fs( g a) e d c b a |
