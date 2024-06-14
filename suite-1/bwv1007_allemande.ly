@@ -2,7 +2,6 @@
 \language "english"
 
 allemande = \context Staff \relative c' {
-
 	\time 2/2
 	\key g \major
 	\clef bass
@@ -15,13 +14,11 @@ allemande = \context Staff \relative c' {
 	\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER 
 	\override TextSpanner.direction = #DOWN
 	\set fingeringOrientations = #'(left)
-
 	\partial 16 
 	\repeat volta 2 {
-		b16_2_3_"I"\upbow\startGroup |
-
+		b16_2_3_\markup{ \smaller "I" }\upbow\startGroup |
 		%1
-		<g,-0 d'-\thumb b'-\finger "2/3">4 ~ b'16 a(_1_"I"\upbow g_\thumb fs)_2_"II"  g16(_3 
+		<g,-0 d'-\thumb b'-\finger "2,3">4 ~ b'16 a(_1_"I"\upbow g_\thumb fs)_2_"II"  g16(_3 
 		d_\thumb e_1 fs)_2 g(_\thumb_"I" a_1 b_2 c)_3 |
 
 		%2
@@ -88,7 +85,7 @@ allemande = \context Staff \relative c' {
 
 		%14
 		d,16_\thumb_\flageolet_\markup {\bold \italic \tiny \concat {
-			"(8" \super "va" ")"}} g'_3 fs_2 e_1 fs_2 d_\thumb_\flageolet 
+			"(8" \super "vb" ")"}} g'_3 fs_2 e_1 fs_2 d_\thumb_\flageolet 
 		a_2_\flageolet d_3_\flageolet d,(_\thumb fs_\3 a)_\thumb c!_2 
 		b8._\finger "2-1"\trill a16_\thumb |
 
@@ -137,37 +134,52 @@ allemande = \context Staff \relative c' {
 
 		%23
 		\slurSolid gs(_\thumb a_1 b!)_3 e,_1 f_2 d(_\thumb c_2 b)_1 c_2\stopGroup 
-		e_\1 a_\thumb\startGroup b_1 
+		e_\1\startGroup a_\thumb b_1
 		<< {
+			\voiceOne
       \once \override Parentheses.font-size = #0
-			b'8.\parenthesize\trill
-			a16_3_\flageolet-"II"} \\ {e4-\thumb} >> |
+			b8.-\finger "2-1"\parenthesize\trill
+			a16_3_\flageolet_"II" \stopGroup} \new Voice {\voiceTwo e4-\thumb} >> 
+			\oneVoice |
 
 		%24
-		<<{a8. b16}\\{a,8. s16}\\{e'8. s16}>> c'16 b c g! fs( g a) e d c b a |
+		<a,-0 e'-2-\flageolet a-3-\flageolet>8. b'16_2_"I" c_3 b_2 c_3 g!_\thumb 
+		fs(_3_"II" g_\thumbcirc a)_2 e_1_"II" d_\thumb c_2 b_1 a_\thumb |
 
 		%25
-		g d'( fs c') b a g a b c d e d e f d |
+		g_0_"I" d'(_\thumb_"II"\startGroup fs_2 c')_3_"I" b_2 a_1 g_\thumb a_1 b_2 
+		c_3\stopGroup d_1\startGroup e_2 d_1 e_2 f_3 d_1 |
 
 		%26
-		e8 g, c,16 d' c b a( b c) e d8. c16 |
+		e8_2\stopGroup g,_\thumb\startGroup c,16_2\stopGroup d'_3\startGroup c_1 
+		b_\thumb a(_3 b_\thumb c)_1 e_3 d8._1 c16_\thumb |
 
 		%27
-		d8 a b,16 c'( b a g fs e) g b d c b |
+		d8_1_\flageolet\stopGroup a_3_\flageolet b,16_2_\flageolet c'(_3\upbow b_2 
+		a)_1 g(_\thumb\downbow fs_3 e)_1 g_\thumb\upbow b_3 d_3 c_1 b_\thumb |
 
 		%28
-		c8 g a,16 e' fs g fs a( b c) d, c b a |
+		c8_\1 g_\thumb_\flageolet a,16_\thumbcirc_\flageolet e'(_1\upbow fs_2 g)_3 
+		fs_2\downbow a(_\thumb_"I"\upbow b_1 c)_2 d,_\thumb_"II" c_2 b_1 a_\thumb |
 
 		%29
-		g d'( fs a) c( a fs) d
-		<<{b'8. s16}\\{g,8. d'16}\\{d8. s16}>> e16( g a) cs |
+		g_0_"I" d'(_\thumb fs_3 a)_1 c(_3 a_1 fs)_3 d_\thumb <g,-0 d'-\thumb b'-3>8.
+		d'16_\thumb_"II" e(_1 g_\thumb_\flageolet_"I" a)_\thumb cs_2 |
 
 		%30
-		d a fs( e d) f g b c g e( d c) e a c |
+		d_3 a(_\thumbcirc fs_3 e)_1 d_\thumb f_2 g_\thumb b_2 c_3 g(_\thumb e_1 
+		d)_\thumb_\flageolet c_2_"III" e_1_"II" a_\thumb_"I"\startGroup c_2 |
 
 		%31
-		fs,!( a c) e d8. c,16 b g' a, g d a' g' fs |
+		fs,!_1_"II"\downbow\stopGroup a(_1\upbow\startGroup c_\thumb_"I" e)_3_2 
+    \once \override Parentheses.font-size = #0
+		d8._1_\flageolet\parenthesize\trill\stopGroup c,16_2_"II"\startGroup b_1 
+		g'_3_"I" a,_\thumb_"II" g_2_"III"\stopGroup d_0_"II" 
+		a'_\thumb_"III"\startGroup g'_3_"II" fs_2 |
 
 		%32
-		g g, b d g b d fs g d b g g,8. }
+		g_3\stopGroup g,_0_"I"\startGroup b_1_"II" d_3_\flageolet\stopGroup 
+		g_\thumb_"I" b_2 d_\thumb fs_2 g(_3 d)_\thumb b(_2 g)_\thumb g,8._0 }
+
+	\mark \markup { \smaller \musicglyph "scripts.ufermata" }
 	}

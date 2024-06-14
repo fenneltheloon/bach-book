@@ -35,5 +35,6 @@ slurDashed = \slurDashPattern 0.6 0.85
     \override HorizontalBracket.staff-padding = 5
     \override HorizontalBracket.outside-staff-priority = 2000
     \override HorizontalBracket.break-overshoot = #'(-5 . -5)
+    \override TextScript.font-size = -2
   }
 }

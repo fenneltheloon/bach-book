@@ -3,7 +3,7 @@
 
 prelude = \context Staff \relative c {
 
-	\override TextSpanner.bound-details.left.text = \markup \upright "III"
+	\override TextSpanner.bound-details.left.text = \markup \fontsize #-2 \upright "III"
 	\override TextSpanner.bound-details.right.text = 
 	\markup \draw-line #'(0 . 1)
 	\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER 
@@ -156,7 +156,7 @@ prelude = \context Staff \relative c {
 
 
 	<< {
-	\override TextSpanner.bound-details.left.text = \markup \upright "II"
+	\override TextSpanner.bound-details.left.text = \markup \fontsize #-2 \upright "II"
 	\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER 
 	\override TextSpanner.direction = #UP
 	%31a
@@ -173,7 +173,7 @@ prelude = \context Staff \relative c {
     s a[ s a] s a[ s a] s a[ s a]^3^"I" s a[^3 s a]^3 } \\ 
 	{
 	%31b
-	\override TextSpanner.bound-details.left.text = \markup \upright "I"
+	\override TextSpanner.bound-details.left.text = \markup \fontsize #-2 \upright "I"
 	\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER 
 	\override TextSpanner.direction = #DOWN
 
