@@ -1,7 +1,7 @@
 \version "2.24.3"
 \language "english"
 
-courante = \context Staff \relative c'' {
+courante = \context Staff \relative c' {
 
 	\override TextSpanner.bound-details.right.text = 
 	\markup \draw-line #'(0 . 1)
@@ -12,7 +12,7 @@ courante = \context Staff \relative c'' {
 	\time 3/4
 	\key g \major
   \clef bass
-
+	\repeat volta 2 {
 	\partial 8 g8_\thumb_"I"\startGroup |
 
 	%1
@@ -36,61 +36,75 @@ courante = \context Staff \relative c'' {
 	b_2 a)_1 |
 
 	%6
-	b( a b) g b( a b) g c, b' a g | 
+	b(_2 a_1 b)_2 g_\thumb b( a b) g_\thumb\stopGroup c,_2_"III"\startGroup b'_3 
+	a_1 g_\thumb | 
 
 	%7
-	fs a d d, g8[ b,] d,[ fs'] |
+	fs_3 a_1\stopGroup d_3_\flageolet d,_\thumb g8[_\thumb_\flageolet 
+	b,]_1\startGroup d,[_0 fs']_2 |
 
 	%8	
-	<g g,>4. b16( a g fs e d) | 
+	<g-3 g,-\thumb>4. b16(_2\upbow a_1 g_\thumb fs_2 e_1 d)_\thumb\stopGroup | 
 
 	%9
-	e'8 cs a[ b16( cs)] d fs,( e d) |
+	e'8_2\startGroup cs_\thumbcirc a[_\2\stopGroup b16(_\thumb\startGroup cs)]_1 
+	d_2_\flageolet\stopGroup fs,(_3\startGroup e_1 d)_\thumb |
 
 	%10
-	a8 d' cs[\trill b16 a] d a b fs | 
+	a8_\thumb\stopGroup d'_2\startGroup cs[_\finger "2-1"\trill b16(_\thumb a])_2 
+	d_3_\flageolet\stopGroup a_1_"I"\startGroup b_3 fs_\thumbcirc\stopGroup | 
 
 	%11
-	g( fs g) e g( fs g) e a, g' fs e |
+	g(_2_"(I)"\startGroup fs_1 g)_2 e_\thumb g( fs g) e_\thumb a,_2_\flageolet 
+	g'(_2 fs_1 e)_\thumb |
 
 	%12
-	fs( e fs) d fs( e fs) d g, fs' e d |
+	fs(_1 e_\thumb fs)_1 d_2 fs(_1 e_\thumb fs)_1 d_2\stopGroup g,_0_"I" 
+	fs'(_3_"II" e_1 d)_\thumbcirc |
 
 	%13
-	d'( cs b a) d8 cs16( b) a( g fs e) | 
+	d'(_3_"I"\downbow cs_2 b_1 a)_\thumb d8_\thumb\upbow cs16_3\downbow b_2\upbow
+	a(_1\startGroup\downbow g_\thumb\upbow fs_2_"II"\downbow e)_1\upbow | 
 
 	%14
-	d( e d) fs d( e d) g d( e d) a' |
+	d(_\thumb\downbow e_1 d)_\thumb fs_2 d( e d) g_\thumb d( e d) a'_1_"I" |
 
 	%15
-	d,( e d) b' d,( e d) cs' d,( e d) d' |
+	d,(_"II" e d) b'_2_"I" d,(_"II" e d) cs'_3_"I" d,(_"II" e d) 
+	d'_3_\flageolet_"I"\stopGroup |
 
 	%16
-	g,( fs e d cs b a) g' fs8.(\trill e16) |
+	g,_\thumb\startGroup fs(_3_"II" e_1 d)_\thumb cs_3 b_1 a_\thumbcirc\stopGroup 
+	g'_2\startGroup fs8.(_\finger "2-1"\trill e16)_\thumbcirc\stopGroup |
 
 	%17
-	a g b( a g fs e d) a8 cs | 
+	a_1\startGroup g_\thumb b(_3 a_1 g_\thumb fs_3 e_1 d)_\thumb a8_\thumb 
+	cs_3\stopGroup | 
 
 	%18
-	d,2 r8 \bar ":|.|:" \break a''8 | 
+	d,2_0 r8 } \repeat volta 2 { a''8_1_"I"\startGroup | 
 
 	%19
-	a fs d[e16( fs] g fs e d) | 
+	a fs_2_"II" d[_\thumb e16(_1 fs]_2 g_3 fs_2 e_1 d)_\thumb | 
 
 	%20
-	d'8 fs, c[ b16( c] d c b a) |
+	d'8_3_\flageolet_"I"\stopGroup fs,_4_"I"\startGroup c[_2_"II" b16(_1 c]_2 
+	d_\thumb_"I" c_2_"II" b_1 a)_\thumb |
 
 	%21
-	b g'( a b c b a g) fs8 d' | 
+	b_1_"II"\stopGroup g'_\thumb\startGroup a_1 b_2 c_3 b_2 a_1 g_\thumb 
+	fs8_2_"II" d'_3_\flageolet_"I" | 
 
 	%22
-	b g g,[ b'16( a]) c( b a g) |
+	b_2 g_\thumb g,[_0\stopGroup\breathe b'16(_2\downbow\startGroup a])_1 
+	c(_3\upbow b_2 a_1 g)_\thumb |
 
 	%23
-	a8 fs ds16 a'( b c b a g fs) | 
+	a8_1\downbow\stopGroup fs_\thumb\upbow\startGroup ds16_1\downbow\stopGroup 
+	a'(_\thumb\upbow\startGroup b_1 c_2 b_1\downbow a_\thumb g_2 fs)_1 | 
 
 	%24
-	g8 e e,[ g'16( fs)] a( g fs e) |
+	g8_2\upbow e_3_\flageolet_"III"\upbow\stopGroup e,[_\thumb_\flageolet_"IV"\downbow g'16(_2_"II"\downbow\startGroup fs)]_1 a(_\thumb_"I"\upbow g_2_"II" fs_1 e)_\thumbcirc |
 
 	%25
 	f( e f) a f(e f) a c( b c) a | 
@@ -144,5 +158,6 @@ courante = \context Staff \relative c'' {
 	b( a b) g c, b' a g d8 fs | 
 	
 	%42
-	<<{g2}\\{g,}>>  r8 \bar ":|."
+	<<{g2}\\{g,}>>  r8 
+}
 }
