@@ -104,60 +104,80 @@ courante = \context Staff \relative c' {
 	a'(_\thumb\upbow\startGroup b_1 c_2 b_1\downbow a_\thumb g_2 fs)_1 | 
 
 	%24
-	g8_2\upbow e_3_\flageolet_"III"\upbow\stopGroup e,[_\thumb_\flageolet_"IV"\downbow g'16(_2_"II"\downbow\startGroup fs)]_1 a(_\thumb_"I"\upbow g_2_"II" fs_1 e)_\thumbcirc |
+	g8_2\upbow e_3_\flageolet_"III"\upbow\stopGroup 
+	e,[_\thumb_\flageolet_"IV"\downbow g'16(_2_"II"\downbow\startGroup fs)]_1 
+	a(_\thumb_"I"\upbow g_2_"II" fs_1 e)_\thumbcirc\stopGroup |
 
 	%25
-	f( e f) a f(e f) a c( b c) a | 
+	f(_2\downbow\startGroup e_1 f)_2 a_1_"I" f(_2_"II" e_1 f)_2\stopGroup 
+	a_\thumb_\flageolet_"II"\startGroup c(_2 b_1 c)_2 a_\thumb | 
 
 	%26
-	ds4~ ds16 c!( b a) g( fs) a( ds,!) |
+	ds4_\finger "2-1"_"I"\trill ~ 16\stopGroup c!(_3 b_2 a)_1 g(_1^\thumb 
+	fs)_\thumb^3 a(_3^\1 ds,!)_2_"II"^\thumb |
 
 	%27
-	g,8 b' a16( g) fs( e) b8 ds | 
+	g,8_0 b'_3_"I" a16(_1 g)_\thumb fs(_3_"II" e)_1 b8_2_"III" ds_1_"II" | 
 
 	%28
-	e,4. e'16( fs g a b c) |
+	e,4._\thumb_\flageolet_"IV" e'16(_1\upbow\startGroup fs_2_3 g_\thumb a_1 b_1 
+	c)_3 |
 
 	%29
-	d8 f, b,[ e16( f] g f e d) | 
+	d8_3_\flageolet\stopGroup f,_2\startGroup b,[_1 e16(_1\upbow f]_2 g_3 f_2 e_1 
+	d)_\thumb | 
 
 	%30
-	e8 c c, [c'16( d] e fs! g e) |
+	e8_1\stopGroup c_2_1\startGroup c,[_\thumb\stopGroup c'16(_1\upbow\startGroup 
+	d]_3 e_\thumb fs!_2 g_3 e)_\thumb\stopGroup |
 
 	%31
-	cs( g' a) g a g cs, g' cs,( g' a) g |
+	cs(_2\downbow g')_3 a_\thumb_\flageolet\upbow g_3\downbow 
+	a_\thumb_\flageolet\upbow g_3\downbow cs,_2\upbow g'_3\downbow cs,(_2\upbow 
+	g')_3 a_\thumb_\flageolet\downbow g_3\upbow |
 
 	%32
-	c,!( fs a) fs a fs c fs c( fs a) fs |
+	c,!(_1\downbow fs)_2 a_\thumb_\flageolet\upbow fs_2\downbow 
+	a_\thumb_\flageolet\upbow fs_2\downbow c_1\upbow fs_2\downbow c(_1\upbow 
+	fs)_2 a_\thumb_\flageolet\downbow fs_2\upbow |
 
 	%33
-	b, d( e f) g, f'( e d) e d'( c b) | 
+	b,_1\downbow d(_\thumb\upbow e_1 f)_2 g,_0_"I" f'(_2_"II" e_1 
+	d)_\thumb_\flageolet e_3_\flageolet_"III" d'(_3_"I" c_1 b)_\thumb | 
 
 	%34
-	fs! a( b c) d, c'( b a) b8( g,) |
+	fs!_\1_"II"\startGroup a(_\thumb_"I" b_1 c)_2 d,_\thumb_\flageolet_"II" 
+	c'(_2_"I" b_1 a)_\thumb b8_1\stopGroup g,_0 |
 
 	%35
-	c, b''16( a) c( b a g) d8 fs | 
+	c,_2 b''16(_1\startGroup a)_\thumb c(_2 b_1 a_\thumb g)_\2 d8_\thumb\stopGroup fs_2 | 
 
 	%36
-	g,16( a g) b g( a g) c g( a g) d' |
+	g,16(_0_"I" a_1_"II" g)_0 b_4 g( a_1 g) c_4 g( a g) d'_3_\flageolet |
 
 	%37
-	g,( a g) e' g,( a g) fs' g,( a g) g' |
+	g,( a g) e'_4_"I" g,( a g) fs'_4 g,( a g) g'_\thumb\startGroup |
 
 	%38
-	c( b a g fs e d) c' b8.(\trill a16) |
+	c_3 b(_2 a_1 g)_\thumb fs_2_"II" e_1 d_\thumbcirc\stopGroup 
+	c'_2_"I"\startGroup 
+  \once \override Parentheses.font-size = #0
+	b8.(_\finger "2-1"\parenthesize\trill a16)_\thumbcirc\stopGroup |
 
 	%39
-	d( c d) b d( c d) b e, d' c b | 
+	d(_2_"I"\startGroup c_1 d)_2 b_\thumb \slurDashed d( c d) b 
+	e,_2_\flageolet_"III" d'_2_"I" c_1 b_\thumb \slurSolid | 
 
 	%40
-	c( b c) a c( b c) a d, c' b a |
+	c(_1 b_\thumb c)_1 a_3_\flageolet_"II" c( b c) a_\3_\flageolet_"II"\stopGroup
+	d,_\thumbcirc c'_3_"I"\startGroup b_2 a_1 |
 
 	%41
-	b( a b) g c, b' a g d8 fs | 
+	b(_2 a_1 b)_2 g_\thumb\stopGroup c,_2_"III"\startGroup b'_3_"I" a_1 g_\thumb 
+	d8_\thumbcirc_\flageolet_"II"\stopGroup fs_2 | 
 	
 	%42
-	<<{g2}\\{g,}>>  r8 
+	<g-3 g,-0>2_"I"^"II" r8 
 }
+	\mark \markup { \smaller \musicglyph "scripts.ufermata" }
 }
