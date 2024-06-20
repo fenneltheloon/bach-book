@@ -1,14 +1,22 @@
 \version "2.24.3"
 \language "english"
 
-sarabande = \context Staff \relative c'' {
+sarabande = \context Staff \relative c' {
   \clef bass
 	\time 3/4
 	\key g \major
 
+	\override TextSpanner.bound-details.right.text = 
+	\markup \draw-line #'(0 . 1)
+	\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER 
+	\override TextSpanner.direction = #DOWN
+	\set fingeringOrientations = #'(left)
+
 	\repeat volta 2 {
 	%1
-	<<{b4 c4. b8}\\{g,4 g2}\\{d'4 e2}>> 
+	<b-2 d,-\thumb g,-0>4\upbow << { c4.^3\downbow b8^3_2\upbow } \\ { 
+	\set fingeringOrientations = #'(left)
+		<e,-1 g,>2 } >> |
 
 	%2
 	fs16( a b c) <<{b4\trill}\\{g,}\\{d'}>> a'8( g) |
