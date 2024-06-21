@@ -7,7 +7,7 @@ thumbcirc = \finger\markup\fontsize #5 \circle \musicglyph "plus"
 flageolet = \finger\markup\fontsize #4 \musicglyph "scripts.flageolet"
 slurDotted = \slurDashPattern 0.25 0.35
 slurDashed = \slurDashPattern 0.6 0.85
-#(set-global-staff-size 22)
+#(set-global-staff-size 20)
 
 % Paper and layout 
 \paper {
@@ -23,7 +23,7 @@ slurDashed = \slurDashPattern 0.6 0.85
       (make-pango-font-tree "Noto Serif"
                             "Noto Sans"
                             "Noto Sans Mono"
-                            (/ staff-height pt 18)))
+                            (/ staff-height pt 20)))
 }
 
 \layout {
