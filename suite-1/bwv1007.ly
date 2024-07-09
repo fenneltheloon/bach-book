@@ -15,7 +15,7 @@
 
 \book {
 
-\score { { \prelude }
+\score { { << \prelude \preludeDynamics >> }
 \header {
 	piece = "Prelude" 
 }

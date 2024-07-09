@@ -18,8 +18,8 @@ allemande = \context Staff \relative c' {
 	\repeat volta 2 {
 		b16_2_3_\markup{ \smaller "I" }\upbow\startGroup |
 		%1
-		<g,-0 d'-\thumb b'-\finger "2,3">4 ~ b'16 a(_1_"I"\upbow g_\thumb fs)_2_"II"  g16(_3 
-		d_\thumb e_1 fs)_2 g(_\thumb_"I" a_1 b_2 c)_3 |
+		<g,-0 d'-\thumb b'-\finger "2,3">4 ~ b'16 a(_1_"I"\upbow g_\thumb fs)_2_"II"  
+		g16(_3 d_\thumb e_1 fs)_2 g(_\thumb_"I" a_1 b_2 c)_3 |
 
 		%2
 		d_3 b_2 \slurDashed g(_\thumb fs_2_"II" g)_3 e_1 d_\thumb c_2 b_1 
@@ -52,7 +52,7 @@ allemande = \context Staff \relative c' {
 		%8
     \once \override Parentheses.font-size = #0
 		fs8_\finger "2-1"\parenthesize\trill\stopGroup 
-		d16(_\thumb\upbow\startGroup e)_1 fs_2 d_\thumb g_3 e_1 fs_2\stopGroup 
+		\slurDotted d16(_\thumb\upbow\startGroup e)_1 \slurSolid fs_2 d_\thumb g_3 e_1 fs_2\stopGroup 
 		d(_\thumbcirc\upbow fs_1\startGroup g)_\2 a(_\thumb_"I"\downbow b_1 c!)_2
 		a_\thumb\upbow |
 
@@ -85,7 +85,7 @@ allemande = \context Staff \relative c' {
 
 		%14
 		d,16_\thumb_\flageolet_\markup {\bold \italic \tiny \concat {
-			"(8" \super "vb" ")"}} g'_3 fs_2 e_1 fs_2 d_\thumb_\flageolet 
+			"(8" \super "vb" ")"}} \slurDashed g'(_3 fs_2 e)_1 \slurSolid fs_2 d_\thumb_\flageolet 
 		a_2_\flageolet d_3_\flageolet d,(_\thumb fs_\3 a)_\thumb c!_2 
 		b8._\finger "2-1"\trill a16_\thumb |
 
@@ -108,20 +108,19 @@ allemande = \context Staff \relative c' {
 		g_\thumb f(_2 e_1 f)_2 d'_3_\flageolet |
 
 		%19
-		e,8_\finger "2-1"^\trill 
+		e,8_\finger "2-1"^\markup \column { \fontsize #-3 \parenthesize 
+	  \musicglyph "accidentals.natural" \fontsize #2 \musicglyph "scripts.trill" } 
 		\once \override Fingering.staff-padding = #2.5
-		\acciaccatura 
-		d16_\thumb c8_2_1 c'16_3 a,_\thumb 
-		b_1 c_2\stopGroup d,_0 c''_2_"I"\startGroup b_1 c_2 d_3_\flageolet b_2 c_3 
-		a_1\stopGroup |
+		\acciaccatura d16_\thumb c8_2_1 c'16_3 a,_\thumb b_1 c_2\stopGroup d,_0 
+		c''_2_"I"\startGroup b_1 c_2 d_3_\flageolet b_2 c_3 a_1\stopGroup |
 
 		%20
 		gs8_\finger "2-1"^\trill\startGroup 
     \once \override Parentheses.font-size = #2
 		\once \override Fingering.staff-padding = #2.5
 		\acciaccatura \parenthesize fs16_\thumb e8_1_"II" b'16_3_"I"\stopGroup 
-		d,_\thumb\startGroup c_2 b_1 c_2 e_1 fs_3 gs!_\thumb a_\1\stopGroup c(_3 
-		b_2 a)_\1 |
+		\slurDashed d,(_\thumb\startGroup c_2 b)_1 \slurSolid c_2 e_1 fs_3 
+		gs!_\thumb a_\1\stopGroup c(_3 b_2 a)_\1 |
 
 		%21
 		d8_3_\flageolet b,16(_1_"III" c)_2 d(_\thumb_"II" e_1 f)_2 a,_\thumb_"III" 
@@ -147,20 +146,21 @@ allemande = \context Staff \relative c' {
 		fs(_3_"II" g_\thumbcirc a)_2 e_1_"II" d_\thumb c_2 b_1 a_\thumb |
 
 		%25
-		g_0_"I" d'(_\thumb_"II"\startGroup fs_2 c')_3_"I" b_2 a_1 g_\thumb a_1 b_2 
-		c_3\stopGroup d_1\startGroup e_2 d_1 e_2 f_3 d_1 |
+		g_0_"I" d'(_\thumb_"II"\startGroup fs_2 c')_3_"I" b_2 a_1 g_\thumb a_1 
+		\slurDashed b(_2 c_3\stopGroup d)_1\startGroup e_2 d_1 e_2 f_3 d_1 |
 
 		%26
-		e8_2\stopGroup g,_\thumb\startGroup c,16_2\stopGroup d'_3\startGroup c_1 
-		b_\thumb a(_3 b_\thumb c)_1 e_3 d8._1 c16_\thumb |
+		e8_2\stopGroup g,_\thumb\startGroup c,16_2\stopGroup d'(_3\startGroup c_1 
+		b)_\thumb \slurSolid a(_3 b_\thumb c)_1 e_3 d8._1 c16_\thumb |
 
 		%27
 		d8_1_\flageolet\stopGroup a_3_\flageolet b,16_2_\flageolet c'(_3\upbow b_2 
 		a)_1 g(_\thumb\downbow fs_3 e)_1 g_\thumb\upbow b_3 d_3 c_1 b_\thumb |
 
 		%28
-		c8_\1 g_\thumb_\flageolet a,16_\thumbcirc_\flageolet e'(_1\upbow fs_2 g)_3 
-		fs_2\downbow a(_\thumb_"I"\upbow b_1 c)_2 d,_\thumb_"II" c_2 b_1 a_\thumb |
+		c8_\1 g_\thumb_\flageolet a,16_\thumbcirc_\flageolet \slurDotted e'(_1\upbow 
+		fs_2 g)_3 \slurSolid fs_2\downbow a(_\thumb_"I"\upbow b_1 c)_2 
+		d,_\thumb_"II" c_2 b_1 a_\thumb |
 
 		%29
 		g_0_"I" d'(_\thumb fs_3 a)_1 c(_3 a_1 fs)_3 d_\thumb <g,-0 d'-\thumb b'-3>8.

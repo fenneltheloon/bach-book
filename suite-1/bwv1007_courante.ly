@@ -31,13 +31,13 @@ courante = \context Staff \relative c' {
 	b)_3\stopGroup | 
 
 	%5
-	c(_1\startGroup b_\thumb c)_1 a_3_\flageolet_"II" c(_1_"I" b_\thumb c)_1 
-	a_\3_\flageolet_"II"\stopGroup d,_\thumbcirc_\flageolet c'(_3_"I"\startGroup 
-	b_2 a)_1 |
+	c(_1\startGroup b_\thumb c)_1 a_3_\flageolet_"II" \slurDashed c(_1_"I" 
+	b_\thumb c)_1 \slurSolid a_\3_\flageolet_"II"\stopGroup 
+	d,_\thumbcirc_\flageolet c'(_3_"I"\startGroup b_2 a)_1 |
 
 	%6
-	b(_2 a_1 b)_2 g_\thumb b( a b) g_\thumb\stopGroup c,_2_"III"\startGroup b'_3 
-	a_1 g_\thumb | 
+	b(_2 a_1 b)_2 g_\thumb \slurDashed b( a b) \slurSolid g_\thumb\stopGroup 
+	c,_2_"III"\startGroup b'_3 a_1 g_\thumb | 
 
 	%7
 	fs_3 a_1\stopGroup d_3_\flageolet d,_\thumb g8[_\thumb_\flageolet 
@@ -51,8 +51,9 @@ courante = \context Staff \relative c' {
 	d_2_\flageolet\stopGroup fs,(_3\startGroup e_1 d)_\thumb |
 
 	%10
-	a8_\thumb\stopGroup d'_2\startGroup cs[_\finger "2-1"\trill b16(_\thumb a])_2 
-	d_3_\flageolet\stopGroup a_1_"I"\startGroup b_3 fs_\thumbcirc\stopGroup | 
+	a8_\thumb\stopGroup d'_2\startGroup cs[_\finger "2-1"\trill \slurDashed 
+	b16(_\thumb a])_2 \slurSolid d_3_\flageolet\stopGroup a_1_"I"\startGroup b_3 
+	fs_\thumbcirc\stopGroup | 
 
 	%11
 	g(_2_"(I)"\startGroup fs_1 g)_2 e_\thumb g( fs g) e_\thumb a,_2_\flageolet 
@@ -78,8 +79,8 @@ courante = \context Staff \relative c' {
 	g'_2\startGroup fs8.(_\finger "2-1"\trill e16)_\thumbcirc\stopGroup |
 
 	%17
-	a_1\startGroup g_\thumb b(_3 a_1 g_\thumb fs_3 e_1 d)_\thumb a8_\thumb 
-	cs_3\stopGroup | 
+	\slurDashed a(_1\startGroup g)_\thumb \slurSolid b(_3 a_1 g_\thumb fs_3 e_1 
+	d)_\thumb a8_\thumb cs_3\stopGroup | 
 
 	%18
 	d,2_0 r8 } \repeat volta 2 { a''8_1_"I"\startGroup | 
@@ -113,8 +114,8 @@ courante = \context Staff \relative c' {
 	a_\thumb_\flageolet_"II"\startGroup c(_2 b_1 c)_2 a_\thumb | 
 
 	%26
-	ds4_\finger "2-1"_"I"\trill ~ 16\stopGroup c!(_3 b_2 a)_1 g(_1^\thumb 
-	fs)_\thumb^3 a(_3^\1 ds,!)_2_"II"^\thumb |
+	ds4_\finger "2-1"_"I"\trill ~ 16\stopGroup \slurDashed c!(_3 b_2 a)_1 
+	\slurSolid g(_1^\thumb fs)_\thumb^3 a(_3^\1 ds,!)_2_"II"^\thumb |
 
 	%27
 	g,8_0 b'_3_"I" a16(_1 g)_\thumb fs(_3_"II" e)_1 b8_2_"III" ds_1_"II" | 
@@ -150,7 +151,8 @@ courante = \context Staff \relative c' {
 	c'(_2_"I" b_1 a)_\thumb b8_1\stopGroup g,_0 |
 
 	%35
-	c,_2 b''16(_1\startGroup a)_\thumb c(_2 b_1 a_\thumb g)_\2 d8_\thumb\stopGroup fs_2 | 
+	c,_2 b''16(_1\startGroup a)_\thumb \slurDashed c(_2 b_1 a_\thumb g)_\2 
+	\slurSolid d8_\thumb\stopGroup fs_2 | 
 
 	%36
 	g,16(_0_"I" a_1_"II" g)_0 b_4 g( a_1 g) c_4 g( a g) d'_3_\flageolet |
@@ -173,7 +175,7 @@ courante = \context Staff \relative c' {
 	d,_\thumbcirc c'_3_"I"\startGroup b_2 a_1 |
 
 	%41
-	b(_2 a_1 b)_2 g_\thumb\stopGroup c,_2_"III"\startGroup b'_3_"I" a_1 g_\thumb 
+	\slurDashed b(_2 a_1 b)_2 \slurSolid g_\thumb\stopGroup c,_2_"III"\startGroup b'_3_"I" a_1 g_\thumb 
 	d8_\thumbcirc_\flageolet_"II"\stopGroup fs_2 | 
 	
 	%42

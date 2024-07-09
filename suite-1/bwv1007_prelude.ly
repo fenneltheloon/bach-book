@@ -1,7 +1,18 @@
 \version "2.24.3"
 \language "english"
 
-prelude = \context Staff \relative c {
+preludeDynamics = \context Dynamics \with {
+	\override TextScript.font-shape = #'upright
+    \override TextScript.padding = #0
+    \override TextScript.staff-padding = #0
+    \override VerticalAxisGroup.staff-affinity = #UP
+    \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #0.5
+    \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.minimum-distance = #0
+} \preludeMusic
+
+prelude = \context Staff \with { \omit TextScript } \preludeMusic
+
+preludeMusic = \relative c {
 
 	\override TextSpanner.bound-details.left.text = \markup \fontsize #-2 \upright "III"
 	\override TextSpanner.bound-details.right.text = 
@@ -115,14 +126,13 @@ prelude = \context Staff \relative c {
 	%22
 	c,_\thumb\startGroup a'(_3_\flageolet\stopGroup d_\thumb_\flageolet\startGroup
 	fs)_3\stopGroup a_\thumb\startGroup cs_2 d8_3\fermata~ 16\stopGroup 
-	a,_\thumb\startGroup b_1 c!_2 d_\thumb e_1 fs_3 g_\thumb |
+	\slurDashed a,(_\thumb\startGroup b_1 c!)_2 d_\thumb e_1 fs_3 g_\thumb |
 
 	%23
-	a_1 fs_3 d_\thumb e_1 fs_3\stopGroup g_\thumb a_1_\startGroup b_2 c_3 a_1 fs_2
-	g_\thumb a_1 b_2 c_3\stopGroup d_2\startGroup |
+	a_1 fs(_3 d_\thumb e)_1 fs_3\stopGroup g_\thumb a_1_\startGroup b_2 c_3 a(_1 fs_2
+	g)_\thumb a_1 b_2 c_3\stopGroup d_2\startGroup |
 
 	%24
-	\slurDashed
 	ef(_3 d_2 cs)_\1\stopGroup d_3\startGroup d( c_2 b)_1\stopGroup
 	c_\3\startGroup c a_1 fs_2 e!_1 d_\thumb a_\thumb_\flageolet b_1 c_2 |
 
@@ -249,4 +259,5 @@ prelude = \context Staff \relative c {
 	<g,-0 b'-1 g'-3>1^\markup{ 
 		\musicglyph "scripts.upbow" \musicglyph "scripts.downbow" } | \fine
 		\mark \markup { \smaller \musicglyph "scripts.ufermata" }
+
 }

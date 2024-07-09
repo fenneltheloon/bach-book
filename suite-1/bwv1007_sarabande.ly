@@ -14,8 +14,8 @@ sarabande = \context Staff \relative c' {
 
 	\repeat volta 2 {
 	%1
-	<b-2 d,-\thumb g,-0>4\upbow << { c4.^3\downbow b8^3_2\upbow } \\ { 
-	\set fingeringOrientations = #'(left)
+	<b-2 d,-\thumb g,-0>4\upbow << { \slurDotted c4.(^3\downbow b8)^3_2\upbow } \\
+	{ \set fingeringOrientations = #'(left)
 		<e,-1 g,>2 } >> |
 
 	%2
@@ -55,15 +55,16 @@ sarabande = \context Staff \relative c' {
   d4_3^2\stopGroup d,_0 \slurSolid | } \repeat volta 2 {
 
 	%9
-	<< { \voiceOne fs'8-2\startGroup e16(_1\upbow d)_\thumb } \new Voice { 
-	\set fingeringOrientations = #'(left)
-	\voiceTwo <d,-0 a'-\thumb>4 } >> \oneVoice <d-0 a'-\thumb fs'-2 c'-3>4.\downbow
-	b''16(_2 a)_1\stopGroup	|
+	<< { \voiceOne fs'8-2\startGroup \slurDotted e16(_1\upbow d)_\thumb } 
+	\new Voice { \set fingeringOrientations = #'(left)
+	\voiceTwo <d,-0 a'-\thumb>4 } >> \oneVoice 
+	<d-0 a'-\thumb fs'-2 c'-3>4.\downbow \slurDotted b''16(_2 a)_1\stopGroup 
+	\slurSolid |
 
 	%10
 	<b-3 d,-\thumb g,-0>16 fs(_\thumb g_\thumbcirc_\flageolet e)_2 
-	<ds\finger "2-1" a-\thumb-\flageolet>8.\trill e16_1\startGroup fs_3 g_\thumb
-	a_1 b_3 |
+	<ds\finger "2-1" a-\thumb-\flageolet>8.\trill e16_1\startGroup \slurDotted 
+	fs(_3 g_\thumb a_1 b_3) \slurSolid |
 
 	%11
 	ds,_\1\stopGroup a'(_\thumb\startGroup b_1 c)_2 
@@ -71,7 +72,7 @@ sarabande = \context Staff \relative c' {
 	e)_1\stopGroup a(_\2 fs)_\thumb | 
 
 	%12
-	g(_\thumb\startGroup e)_1 fs(_\3 ds)_\thumb e4_1 
+	\slurDashed g(_\thumb\startGroup e)_1 fs(_\3 ds)_\thumb \slurSolid e4_1 
 	e,_\thumb_\flageolet\stopGroup \breathe |
 
 	%13

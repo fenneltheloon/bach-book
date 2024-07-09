@@ -7,6 +7,9 @@ thumbcirc = \finger\markup\fontsize #5 \circle \musicglyph "plus"
 flageolet = \finger\markup\fontsize #4 \musicglyph "scripts.flageolet"
 slurDotted = \slurDashPattern 0.25 0.35
 slurDashed = \slurDashPattern 0.6 0.85
+trill = \once \override Script.font-size = #-2 \trill
+downbow = \once \override Script.font-size = #-2 \downbow
+upbow = \once \override Script.font-size = #-2 \upbow
 #(set-global-staff-size 20)
 
 % Paper and layout 
@@ -36,5 +39,7 @@ slurDashed = \slurDashPattern 0.6 0.85
     \override HorizontalBracket.outside-staff-priority = 2000
     \override HorizontalBracket.break-overshoot = #'(-5 . -5)
     \override TextScript.font-size = -2
+    \alterBroken extra-offset #'((0 . 0) (6 . -1.5)) HorizontalBracket
+    \alterBroken shorten-pair #'((0 . 0) (0 . 5)) HorizontalBracket
   }
 }
