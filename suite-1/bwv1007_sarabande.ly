@@ -1,15 +1,15 @@
 \version "2.24.3"
 \language "english"
 
+\include "bwv1007_sarabande_s.ly"
+
 sarabande = \context Staff \relative c' {
   \clef bass
 	\time 3/4
 	\key g \major
 
-	\override TextSpanner.bound-details.right.text = 
-	\markup \draw-line #'(0 . 1)
-	\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER 
-	\override TextSpanner.direction = #DOWN
+  \override Script.font-size = -1
+  \override TextScript.font-size = -2
 	\set fingeringOrientations = #'(left)
 
 	\repeat volta 2 {
@@ -19,30 +19,29 @@ sarabande = \context Staff \relative c' {
 		<e,-1 g,>2 } >> |
 
 	%2
-	fs16_1_"II"^2\downbow a(_\thumb_"I"^1\upbow b_1^2 c)_2^3 <b-\finger \markup 
+	fs16_1^2\downbow a(_\thumb^1\upbow b_1^2 c)_2^3 <b-\finger \markup 
 	\override #'(baseline-skip . 1.4) \column {"3-2" "2-1"} d,-\thumb g,-0>4\trill\downbow a8(_1\upbow 
 	g)_\thumb_\flageolet \breathe |
 
 	%3
   \override TupletBracket.bracket-visibility = ##f
   \omit TupletNumber
-	d'_3_\flageolet\downbow f,_2_"II"\upbow e8.[(_1_\flageolet\downbow 
-	\tuplet 3/2 { d32_\thumb c_2_"III" b]_1 } c8[)_2 e]_1_"II"\upbow |
+	d'_3_\flageolet\downbow f,_2\upbow e8.[(_1_\flageolet\downbow 
+	\tuplet 3/2 { d32_\thumb c_2 b]_1 } c8[)_2 e]_1\upbow |
 
 	%4
-	\override TextSpanner.bound-details.left.text = \markup \fontsize #-2 \upright "I"
-	fs!16_2\downbow c'(_3\upbow\startTextSpan b_2 g)_1 
-	fs4_\finger "2-1"\downbow\trill \slurDashed e8(_\thumb\upbow\stopTextSpan 
-	d)_2_"II" \parenthesize \breathe \slurSolid |
+	fs!16_2\downbow c'(_3\upbow b_2 g)_1 
+	fs4_\finger "2-1"\downbow\trill \slurDashed e8(_\thumb\upbow 
+	d)_2 \parenthesize \breathe \slurSolid |
 
 	%5
-	a'16_1_\flageolet_"II"\downbow fs(_2_"I"\upbow d_3_"II" c)_1 b8._1 
-	g16_0_"I"\upbow b_1_"II"\downbow d(_3_\flageolet\upbow\startGroup 
-	g_\thumb_"I" a)_1 |
+	a'16_1_\flageolet\downbow fs(_2\upbow d_3 c)_1 b8._1 
+	g16_0\upbow b_1\downbow d(_3_\flageolet\upbow\startGroup 
+	g_\thumb a)_1 |
 
 	%6
-	b_3 g(_\thumb e_1_"II" d)_\thumb_\flageolet\stopGroup 
-	cs8._\finger "2-1"\trill\startGroup a32(_2_"III" b_\thumb_"II" cs16_1 d_2 
+	b_3 g(_\thumb e_1 d)_\thumb_\flageolet\stopGroup 
+	cs8._\finger "2-1"\trill\startGroup a32(_2 b_\thumb cs16_1 d_2 
 	e_\thumb fs)_1\stopGroup |
 
 	%7
@@ -77,8 +76,8 @@ sarabande = \context Staff \relative c' {
 
 	%13
 	<b'-1 d!-\thumb>8.\downbow\startGroup e32(_1 f)_2 <e-1 g,-0 c,-\finger
-	\markup \column {"2"}>8._"II"_\markup 
-	\bold \italic \concat {"(8" \super "va" ")"} fs16_3_2 g_\thumb_"I"\downbow 
+	\markup \column {"2"}>8._\markup 
+	\bold \italic \concat {"(8" \super "va" ")"} fs16_3_2 g_\thumb\downbow 
 	a(_1\upbow b_2 c)_\3 |
 
 	%14

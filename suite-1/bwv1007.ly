@@ -15,41 +15,41 @@
 
 \book {
 
-\score { { << \prelude \preludeDynamics >> }
+\score { { << \prelude \preludeStrings \preludeBrackets >> }
 \header {
 	piece = "Prelude" 
 }
 }
 
-\score { { \allemande } 
+\score { { << \allemande \allemandeStrings >> } 
 \header {
 	piece = "Allemande" 
   opus = ##f 
 }
 }
 
-\score { { \courante }
+\score { { << \courante \couranteStrings >> }
 \header {
 	piece = "Courante" 
   opus = ##f 
 }
 }
 
-\score { { \sarabande }
+\score { { << \sarabande \sarabandeStrings >> }
 \header {
 	piece = "Sarabande" 
   opus = ##f 
 }
 }
 
-\score { { \menuetI }
+\score { { << \menuetI \menuetIStrings >> }
 \header {
 	piece = "Minuet I" 
   opus = ##f 
 }
 }
 
-\score { { \menuetII }
+\score { { << \menuetII \menuetIIStrings >> }
 \header {
 	piece = "Minuet II" 
   opus = ##f 

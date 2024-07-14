@@ -6,10 +6,8 @@ gigue = \context Staff \relative c {
 	\time 6/8
 	\key g \major
 
-	\override TextSpanner.bound-details.right.text = 
-	\markup \draw-line #'(0 . 1)
-	\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER 
-	\override TextSpanner.direction = #DOWN
+  \override Script.font-size = -1
+  \override TextScript.font-size = -2
 	\set fingeringOrientations = #'(left)
 
 	\repeat volta 2 {

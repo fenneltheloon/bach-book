@@ -1,32 +1,20 @@
 \version "2.24.3"
 \language "english"
 
-preludeDynamics = \context Dynamics \with {
-	\override TextScript.font-shape = #'upright
-    \override TextScript.padding = #0
-    \override TextScript.staff-padding = #0
-    \override VerticalAxisGroup.staff-affinity = #UP
-    \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #0.5
-    \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.minimum-distance = #0
-} \preludeMusic
+\include "bwv1007_prelude_s.ly"
 
-prelude = \context Staff \with { \omit TextScript } \preludeMusic
+prelude = \context Staff \relative c {
 
-preludeMusic = \relative c {
-
-	\override TextSpanner.bound-details.left.text = \markup \fontsize #-2 \upright "III"
-	\override TextSpanner.bound-details.right.text = 
-	\markup \draw-line #'(0 . 1)
-	\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER 
-	\override TextSpanner.direction = #DOWN
+  \override Script.font-size = -1
+  \override TextScript.font-size = -2
 	\set fingeringOrientations = #'(left)
 
 	\clef bass
 	\key g \major
 
 	% 1
-	g16(_0\startGroup d'_\thumb_\flageolet b')_2_3 a_1 b d, b' d, 
-	g,( d' b') a b d, b' d,\stopGroup |
+	g16(_0 d'_\thumb_\flageolet b')_2_3 a_1 b d, b' d, 
+	g,( d' b') a b d, b' d, |
 
 	%2
 	g,(_0 e'_1^\thumb\startGroup c')^2_3 b_2^1 c e, c' e, 
@@ -43,7 +31,7 @@ preludeMusic = \relative c {
 
 	%5
 	g,(_0 e'_1 b')_3 a_1 b\stopGroup g_\thumb\startGroup fs_3^2 g_\thumb^3 e_1^1
-	g_\thumb_\flageolet^3 fs_3^2 g_\thumb_\flageolet^3 b,_\thumb^1_"II"
+	g_\thumb_\flageolet^3 fs_3^2 g_\thumb_\flageolet^3 b,_\thumb^1
 	d_3^\thumb cs_2^1 b_\thumb^1 |
 
 	%6
@@ -152,8 +140,8 @@ preludeMusic = \relative c {
 
 	%28
 	d_3 a_3\stopGroup fs_3\startGroup e_1 fs_3 a_3_\flageolet_1 d,_\thumb fs_3 
-	a,_\thumb_\flageolet d_\thumb_\flageolet cs_3 b_1\startTextSpan\stopGroup
-	a_\thumb_\flageolet g_2\startGroup fs_1 e_\thumb\stopTextSpan\stopGroup |
+	a,_\thumb_\flageolet d_\thumb_\flageolet cs_3 b_1\stopGroup
+	a_\thumb_\flageolet g_2\startGroup fs_1 e_\thumb\stopGroup |
 
 	%29
 	d8_0\breathe c''!16(_3\startGroup\upbow b_2 a_1 g_\thumb fs_2 e)_1 
@@ -169,6 +157,7 @@ preludeMusic = \relative c {
 	\override TextSpanner.bound-details.left.text = \markup \fontsize #-2 \upright "II"
 	\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER 
 	\override TextSpanner.direction = #UP
+  \override TextScript.font-size = -2
 	%31a
 		s4 s16 a'[^\thumb^\flageolet\startTextSpan s a]^\thumb^\flageolet s a[ s a] s a[\stopTextSpan s a] |
 	%32a
@@ -183,16 +172,13 @@ preludeMusic = \relative c {
     s a[ s a] s a[ s a] s a[ s a]^3^"I" s a[^3 s a]^3 } \\ 
 	{
 	%31b
-	\override TextSpanner.bound-details.left.text = \markup \fontsize #-2 \upright "I"
-	\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER 
-	\override TextSpanner.direction = #DOWN
 
-	  \slurUp a,_\thumb_\flageolet g'(_3_\flageolet\startTextSpan\startGroup fs_3 
+	  \slurUp a,_\thumb_\flageolet g'(_3_\flageolet\startGroup fs_3 
 	  e)_1\slurDashed fs[(_3 \hideNotes a) \unHideNotes 
 	  d,](_\thumb \hideNotes a') \unHideNotes 
 	  e[(_1 \hideNotes a) \unHideNotes 
 	  fs](_3 \hideNotes a) \unHideNotes
-	  g[(_3\stopTextSpan \hideNotes a) \unHideNotes
+	  g[(_3 \hideNotes a) \unHideNotes
 	  e](_1 \hideNotes a) \unHideNotes |
 	%32b
 	  \slurUp fs([_3 \hideNotes a) \unHideNotes 
@@ -205,9 +191,9 @@ preludeMusic = \relative c {
 	  e]_1 \hideNotes a \unHideNotes |
 	%33b
     fs[_3 s d]_\thumb s e[_1 s fs]_3 s\stopGroup g[_\thumb s a]_\thumb s b[_\thumb s 
-	  d,]_1_"III" s | 
+	  d,]_1 s | 
 	%34b
-    a'[_\thumb s b]_\thumb s c[_1 s d,]_1_"III" s b'[_\thumb s c]_1 s d[_3_\flageolet s 
+    a'[_\thumb s b]_\thumb s c[_1 s d,]_1 s b'[_\thumb s c]_1 s d[_3_\flageolet s 
 	  b]_\thumb s |
 	%35b
     c[_1 s b]_\thumb s c[_1 s a]_\thumb s b[_\thumb s a]_\thumb s b[_1 s g]_\thumb s |
@@ -217,26 +203,15 @@ preludeMusic = \relative c {
 	} >>
 
 	%37
-	fs_1 a_3_\flageolet\upbow d,_\thumb\downbow e_1\upbow 
-	<< {\slurDashed \slurDown f[(^2 \hideNotes d) \unHideNotes fs](^3 \hideNotes 
-			d) \unHideNotes g[(^\thumb^\flageolet \hideNotes d) \unHideNotes gs](^1 
-			\hideNotes d) \unHideNotes a'[(^1 \hideNotes 
-			d,) \unHideNotes bf'](^2 \hideNotes d,)\unHideNotes | 
-	%38a
-	  b'![(^3 \hideNotes d,) \unHideNotes 
-	  c'](^3 \hideNotes d,) \unHideNotes 
-	  cs'[(^3 \hideNotes d,) \unHideNotes 
-	  d'](^\thumb^\flageolet \hideNotes d,) \unHideNotes 
-	  ef'[^1\downbow \hideNotes d,\upbow \unHideNotes 
-	  e']^1\downbow \hideNotes d,\upbow \unHideNotes 
-	  f'[^2\downbow \hideNotes d,\upbow \unHideNotes
-	  fs']^3\downbow \hideNotes d,\upbow \unHideNotes } \\
-	  {s d[_\thumb_\flageolet s d]_\thumb_\flageolet s d[ s d] s d[ s d] |
-	%38b
-	 	s d[ s d] s d[ s 
-	 	d]_0_\markup {\bold \italic \small \concat {"(8" \super "vb" ")"}} s 
-	 	d[_0 s d]_0 s d[ s d]
-	 } >> |
+	fs_1 a_3_\flageolet\upbow d,_\thumb\downbow e_1\upbow \slurDashed f(_2 
+	d)_\thumb_\flageolet fs(_3 d)_\thumb_\flageolet g(_\thumb_\flageolet d) 
+	gs(_1 d) a'(_1 d,) bf'(_2 d,) |
+
+	%38
+	b'(_3 d,) c'(_3 d,) cs'(_3 d,) d'(_\thumb_\flageolet 
+	d,)_0_\markup {\bold \italic \small \concat {"(8" \super "vb" ")"}} 
+	ef'_1\downbow d,_0\upbow e'_1\downbow d,_0\upbow f'_2\downbow d,\upbow 
+	fs'_3\downbow d,\upbow |
 
 	%39
 	g'_3_\flageolet b,(_1 d,_\thumb b')_1 g'_3_\flageolet b,_1 g' b, g' 

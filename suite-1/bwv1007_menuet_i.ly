@@ -1,15 +1,15 @@
 \version "2.24.3"
 \language "english"
 
+\include "bwv1007_menuet_i_s.ly"
+
 menuetI = \context Staff \relative c {
   \clef bass
 	\time 3/4
 	\key g \major
 
-	\override TextSpanner.bound-details.right.text = 
-	\markup \draw-line #'(0 . 1)
-	\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER 
-	\override TextSpanner.direction = #DOWN
+  \override Script.font-size = -1
+  \override TextScript.font-size = -2
 	\set fingeringOrientations = #'(left)
 
 	\repeat volta 2 {
@@ -33,7 +33,7 @@ menuetI = \context Staff \relative c {
 	a,8(_\thumb\downbow fs')_2 c'4_\3\upbow b8_1\downbow c16(_2\upbow d)_3 | 
 	
 	%6
-	c8(_2\downbow b)_1 a(_3_\flageolet_"II"\upbow g)_\thumb fs(_3_2\downbow 
+	c8(_2\downbow b)_1 a(_3_\flageolet\upbow g)_\thumb fs(_3_2\downbow 
 	e)_1\upbow |
 
 	%7
@@ -66,32 +66,32 @@ menuetI = \context Staff \relative c {
 	a(_1\downbow g)_\thumb fs(\upbow_3_2 e)_1 b_4\downbow ds_2\upbow |
 
 	%16
-	e,4._1 e'8[_4_"I"\upbow d!_1 c]_4_"II" |
+	e,4._1 e'8[_4\upbow d!_1 c]_4 |
 
 	%17
-	b(_2\downbow d)_3_\flageolet g4_3_\flageolet_"I"\upbow d8(_1\downbow 
+	b(_2\downbow d)_3_\flageolet g4_3_\flageolet\upbow d8(_1\downbow 
 	e16_2\upbow f)_4 |
 
 	%18
-	f8(\downbow d_1 e)_2 c_4_"II" c,_1_"IV" b'_2_"II" |
+	f8(\downbow d_1 e)_2 c_4 c,_1 b'_2 |
 
 	%19
-	cs(_1 e)_\thumb_"I" a4_3 e8(_\thumb fs!16_1 g)_2 |
+	cs(_1 e)_\thumb a4_3 e8(_\thumb fs!16_1 g)_2 |
 
 	%20
-	g8(_2 e_\thumb fs)_1 d_2_\flageolet_"II" d,_0 a'_3_\flageolet_"III" |
+	g8(_2 e_\thumb fs)_1 d_2_\flageolet d,_0 a'_3_\flageolet |
 
 	%21
-	d(_\thumb_"II"\downbow fs_2 a)_1_"I" c!_3\upbow b_2\downbow d_3\upbow |
+	d(_\thumb\downbow fs_2 a)_1 c!_3\upbow b_2\downbow d_3\upbow |
 
 	%22
-	e,(_1_"II"\downbow g_\thumb_"I" b)_3 d_2^1 c_1^\thumb e_3^3 |
+	e,(_1\downbow g_\thumb b)_3 d_2^1 c_1^\thumb e_3^3 |
 
 	%23
-	d_2_\flageolet^1 fs,(_2_"II"\upbow g_3 b,)_1_"III" d,_0_"II"\downbow fs'_2_"II"\upbow |
+	d_2_\flageolet^1 fs,(_2\upbow g_3 b,)_1 d,_0\downbow fs'_2\upbow |
 
 	%24
-	<g-3 g,-0>2._"I"^"II" |
+	<g-3 g,-0>2.^"II" |
 }
 	\mark \markup { \smaller \musicglyph "scripts.ufermata" }
 }
