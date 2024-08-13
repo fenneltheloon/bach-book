@@ -3,7 +3,7 @@
 
 \include "bwv1007_sarabande_s.ly"
 
-sarabande = \context Staff \relative c' {
+sarabande = \new Staff \relative c' {
   \clef bass
 	\time 3/4
 	\key g \major
@@ -92,5 +92,4 @@ sarabande = \context Staff \relative c' {
 	%16
 	d_\thumb\stopGroup g(_1\startGroup a_3 fs)_\thumb g4\prall^\markup \italic "2x"\stopGroup g,_0 | 
 }
-	\mark \markup { \smaller \musicglyph "scripts.ufermata" }
 }

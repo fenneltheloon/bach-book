@@ -3,7 +3,7 @@
 
 \include "bwv1007_allemande_s.ly"
 
-allemande = \context Staff \relative c' {
+allemande = \new Staff \relative c' {
 
   \override Script.font-size = -1
   \override TextScript.font-size = -2
@@ -187,7 +187,8 @@ allemande = \context Staff \relative c' {
 
 		%32
 		g_3\stopGroup g,_0\startGroup b_1 d_3_\flageolet\stopGroup 
-		g_\thumb b_2 d_\thumb fs_2 g(_3 d)_\thumb b(_2 g)_\thumb g,8._0 }
+		g_\thumb b_2 d_\thumb fs_2 g(_3 d)_\thumb b(_2 g)_\thumb g,8._0 
 
-	\mark \markup { \smaller \musicglyph "scripts.ufermata" }
+	} 
+	\pageBreak
 	}

@@ -1,20 +1,18 @@
-\version "2.24.3"
+\version "2.24.4"
 \language "english"
 
 \include "bwv1007_prelude_s.ly"
 
-prelude = \context Staff \relative c {
+prelude = \new Staff \relative c {
 
-  \override Script.font-size = -1
-  \override TextScript.font-size = -2
 	\set fingeringOrientations = #'(left)
 
 	\clef bass
 	\key g \major
 
 	% 1
-	g16(_0 d'_\thumb_\flageolet b')_2_3 a_1 b d, b' d, 
-	g,( d' b') a b d, b' d, |
+	g16(_0\startGroup d'_\thumb_\flageolet b')_2_3 a_1 b d, b' d, 
+	g,( d' b') a b d, b' d,\stopGroup |
 
 	%2
 	g,(_0 e'_1^\thumb\startGroup c')^2_3 b_2^1 c e, c' e, 
@@ -30,12 +28,17 @@ prelude = \context Staff \relative c {
 	g,( g' b) a b g b_3 fs_2 |
 
 	%5
-	g,(_0 e'_1 b')_3 a_1 b\stopGroup g_\thumb\startGroup fs_3^2 g_\thumb^3 e_1^1
-	g_\thumb_\flageolet^3 fs_3^2 g_\thumb_\flageolet^3 b,_\thumb^1
+	g,(_0 e'_1 b')_3 a_1 b\stopGroup g_\thumb\startGroup
+  \once \override HorizontalBracket.direction = #DOWN
+  \startGroup
+	fs_3^2 g_\thumb^3 e_1^1
+	g_\thumb_\flageolet^3 fs_3^2 g_\thumb_\flageolet^3\stopGroup
+  \once \override HorizontalBracket.direction = #DOWN
+	b,_\thumb^1\startGroup
 	d_3^\thumb cs_2^1 b_\thumb^1 |
 
 	%6
-	cs(_2^2 g'_3^3\stopGroup a)_\thumb_\flageolet^3^\flageolet
+	cs(_2^2 g'^3_3\stopGroup\stopGroup a)^3_\thumb_\flageolet^\flageolet
 	g_3^\thumb^\flageolet a g a g cs,(_2^1 g'_3^2
 	a)_\thumb_\flageolet^3^\flageolet g_3^\thumb a g a g_\thumb_\flageolet^1 |
 
@@ -233,6 +236,7 @@ prelude = \context Staff \relative c {
 	%42
 	<g,-0 b'-1 g'-3>1^\markup{ 
 		\musicglyph "scripts.upbow" \musicglyph "scripts.downbow" } | \fine
-		\mark \markup { \smaller \musicglyph "scripts.ufermata" }
+
+	\pageBreak
 
 }

@@ -1,9 +1,9 @@
-\version "2.24.3"
+\version "2.24.4"
 \language "english"
 
 \include "bwv1007_menuet_ii_s.ly"
 
-menuetII = \context Staff \relative c' {
+menuetII = \new Staff \relative c' {
   \clef bass
 	\time 3/4
 	\key d \minor
@@ -92,5 +92,4 @@ menuetII = \context Staff \relative c' {
 }
 	\once \tweak direction #DOWN
 	\textEndMark \markup \smaller \italic \bold "Minuet I da capo" 
-	\mark \markup { \smaller \musicglyph "scripts.ufermata" }
 }

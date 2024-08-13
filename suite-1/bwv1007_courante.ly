@@ -1,9 +1,9 @@
-\version "2.24.3"
+\version "2.24.4"
 \language "english"
 
 \include "bwv1007_courante_s.ly"
 
-courante = \context Staff \relative c' {
+courante = \new Staff \relative c' {
 
   \override TextScript.font-size = -2
   \override Script.font-size = -1
@@ -185,5 +185,5 @@ courante = \context Staff \relative c' {
 	%42
 	<g-3 g,-0>2^"II" r8 
 }
-	\mark \markup { \smaller \musicglyph "scripts.ufermata" }
+	\pageBreak
 }

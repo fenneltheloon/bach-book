@@ -1,9 +1,9 @@
-\version "2.24.3"
+\version "2.24.4"
 \language "english"
 
 \include "bwv1007_menuet_i_s.ly"
 
-menuetI = \context Staff \relative c {
+menuetI = \new Staff \relative c {
   \clef bass
 	\time 3/4
 	\key g \major
@@ -93,5 +93,4 @@ menuetI = \context Staff \relative c {
 	%24
 	<g-3 g,-0>2.^"II" |
 }
-	\mark \markup { \smaller \musicglyph "scripts.ufermata" }
 }

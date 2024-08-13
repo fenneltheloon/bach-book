@@ -1,7 +1,7 @@
-\version "2.24.3"
+\version "2.24.4"
 \language "english"
 
-gigue = \context Staff \relative c {
+gigue = \new Staff \relative c {
   \clef bass
 	\time 6/8
 	\key g \major
@@ -122,5 +122,4 @@ gigue = \context Staff \relative c {
 	g_\thumb\downbow d(_3\parenthesize-.\upbow b)_\thumb\parenthesize-.\upbow 
 	g4_0
 }
-	\mark \markup { \smaller \musicglyph "scripts.ufermata" }
 }
